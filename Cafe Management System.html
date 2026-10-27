@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brew & Bite | Cafe Management</title>
+  <link rel="stylesheet" href="Cafe Management System.css">
+  <script src="Cafe Management System.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>☕ Brew & Bite</h2>
+    <p class="muted">CAFE MANAGEMENT</p>
+    <nav>
+      <a href="#dashboard">▦ Dashboard</a>
+      <a href="#menu">☕ Menu & Orders</a>
+      <a href="#billing">🧾 Billing</a>
+      <a href="#history">📋 Order History</a>
+    </nav>
+    <div class="side-note">Fresh coffee.<br>Fresh beginnings.</div>
+  </aside>
+
+  <main>
+    <header>
+      <div>
+        <p class="muted">WELCOME BACK</p>
+        <h1>Good day, Cafe Manager!</h1>
+        <p class="muted">Manage your cafe from one place.</p>
+      </div>
+      <span class="status">● Cafe Open</span>
+    </header>
+
+    <section id="dashboard">
+      <h2>Dashboard</h2>
+      <div class="stats">
+        <article class="stat">
+          <span>Total Sales</span>
+          <h2 id="totalSales">₹0</h2>
+          <small>Completed orders</small>
+        </article>
+        <article class="stat">
+          <span>Orders Today</span>
+          <h2 id="totalOrders">0</h2>
+          <small>Completed orders</small>
+        </article>
+        <article class="stat">
+          <span>Menu Items</span>
+          <h2 id="menuCount">0</h2>
+          <small>Available products</small>
+        </article>
+      </div>
+    </section>
+
+    <section id="menu" class="workspace">
+      <div class="menu-panel">
+        <div class="section-head">
+          <div>
+            <h2>Our Menu</h2>
+            <p class="muted">Choose your favourites</p>
+          </div>
+          <input id="search" placeholder="Search menu..." aria-label="Search menu">
+        </div>
+
+        <div id="categories" class="categories"></div>
+        <div id="menuGrid" class="menu-grid"></div>
+      </div>
+
+      <div id="billing" class="cart-panel">
+        <h2>Current Order</h2>
+        <label for="customerName">Customer name</label>
+        <input id="customerName" placeholder="Enter customer name">
+
+        <div id="cartItems" class="cart-items">
+          <p class="muted">Your cart is empty.</p>
+        </div>
+
+        <div class="bill-lines">
+          <div><span>Subtotal</span><span id="subtotal">₹0.00</span></div>
+          <div><span>GST (5%)</span><span id="gst">₹0.00</span></div>
+          <div class="grand-total"><strong>Total</strong><strong id="grandTotal">₹0.00</strong></div>
+        </div>
+
+        <button id="placeOrder" class="primary full">Place Order & Generate Bill</button>
+        <button id="clearCart" class="secondary full">Clear Cart</button>
+        <p class="muted small">Demo GST calculation: 5%. Adjust as required.</p>
+      </div>
+    </section>
+
+    <section id="history">
+      <h2>Recent Orders</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Order ID</th><th>Customer</th><th>Date</th><th>Items</th><th>Total</th><th>Bill</th></tr>
+          </thead>
+          <tbody id="orderHistory"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>Brew & Bite Cafe · Cafe Management System</footer>
+  </main>
+
+  <dialog id="receipt">
+    <div id="receiptContent"></div>
+    <div class="receipt-actions no-print">
+      <button id="printBill" class="primary">Print Bill</button>
+      <button id="closeReceipt" class="secondary">Close</button>
+    </div>
+  </dialog>
+</body>
+</html>
