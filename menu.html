@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Menu | Brew & Bite</title>
+  <link rel="stylesheet" href="pages.css">
+  <script src="pages.js" defer></script>
+</head>
+<body data-page="menu">
+  <header class="topbar">
+    <a class="brand" href="index.html">☕ Brew & Bite</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a class="active" href="menu.html">Menu</a>
+      <a href="order.html">Order <span id="cartCount">0</span></a>
+      <a href="info.html">Info</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="page-hero">
+      <p class="eyebrow">MADE FRESH, SERVED WITH LOVE</p>
+      <h1>Explore Our Menu</h1>
+      <p>Your favourite coffee, delicious snacks and sweet treats.</p>
+    </section>
+
+    <div class="menu-toolbar">
+      <input id="menuSearch" placeholder="Search food or drinks..." aria-label="Search menu">
+      <div id="pageCategories" class="page-categories"></div>
+    </div>
+
+    <div id="pageMenuGrid" class="page-menu-grid"></div>
+
+    <section class="bottom-cta">
+      <h2>Found your favourite?</h2>
+      <p>Add items to your cart and place your order.</p>
+      <a class="btn" href="order.html">Go to Order →</a>
+    </section>
+  </main>
+
+  <footer>Brew & Bite · Fresh coffee, happy moments ☕</footer>
+</body>
+</html>
